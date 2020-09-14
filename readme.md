@@ -64,7 +64,7 @@ Clean Up
 --------
 
 There are 2 tasks defined for cleaning build output:
-```
+```bash
 # Delete the workspace directory created by the setup task (workspace/)
 ./gradlew cleanWorkspace
 # Delete the cache directory used to store task outputs before the final setup step (.gradle/cache/)
