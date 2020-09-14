@@ -1,8 +1,8 @@
 Yarn Patches
 ============
 
-Decompilation patches for Fabric's intermediary patches. This repo is named "Yarn"
-because intermediary is an awful name and I'd rather avoid it.
+Decompilation patches for Minecraft using Fabric's intermediary names. This repo is named "Yarn"
+because intermediary is an awful name and I'd rather avoid using it.
 
 This repo is based on [ForgedFlower](https://github.com/natanfudge/ForgedFlower).
 
