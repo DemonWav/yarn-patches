@@ -1,0 +1,11 @@
+--- a/net/minecraft/class_2688.java
++++ b/net/minecraft/class_2688.java
+@@ -20,7 +20,7 @@
+ 
+ public abstract class class_2688<O, S> {
+    private static final Function<Entry<class_2769<?>, Comparable<?>>, String> field_24737 = new Function<Entry<class_2769<?>, Comparable<?>>, String>() {
+-      public String method_11576(@Nullable Entry<class_2769<?>, Comparable<?>> entry) {
++      public String apply(@Nullable Entry<class_2769<?>, Comparable<?>> entry) {
+          if (entry == null) {
+             return "<NULL>";
+          } else {

@@ -1,0 +1,43 @@
+--- a/net/minecraft/class_2378.java
++++ b/net/minecraft/class_2378.java
+@@ -171,8 +171,8 @@
+    private static <T, R extends class_2385<T>> R method_10227(class_5321<? extends class_2378<T>> arg, R arg2, Supplier<T> supplier, Lifecycle lifecycle) {
+       class_2960 lv = arg.method_29177();
+       field_11140.put(lv, supplier);
+-      class_2385<R> lv2 = field_25101;
+-      return lv2.method_10272(arg, arg2, lifecycle);
++      class_2385<R> lv2 = (class_2385<R>) field_25101;
++      return lv2.method_10272((class_5321<R>) arg, arg2, lifecycle);
+    }
+ 
+    protected class_2378(class_5321<? extends class_2378<T>> arg, Lifecycle lifecycle) {
+@@ -190,11 +190,11 @@
+ 
+    public <U> DataResult<Pair<T, U>> decode(DynamicOps<U> dynamicOps, U object) {
+       return dynamicOps.compressMaps() ? dynamicOps.getNumberValue(object).flatMap((number) -> {
+-         T object = this.method_10200(number.intValue());
+-         return object == null ? DataResult.error("Unknown registry id: " + number) : DataResult.success(object, this.method_31139(object));
++         T obj = this.method_10200(number.intValue());
++         return obj == null ? DataResult.error("Unknown registry id: " + number) : DataResult.success(obj, this.method_31139(obj));
+       }).map((objectx) -> Pair.of(objectx, dynamicOps.empty())) : class_2960.field_25139.decode(dynamicOps, object).flatMap((pair) -> {
+-         T object = this.method_10223((class_2960)pair.getFirst());
+-         return object == null ? DataResult.error("Unknown registry key: " + pair.getFirst()) : DataResult.success(Pair.of(object, pair.getSecond()), this.method_31139(object));
++         T obj = this.method_10223((class_2960)pair.getFirst());
++         return obj == null ? DataResult.error("Unknown registry key: " + pair.getFirst()) : DataResult.success(Pair.of(obj, pair.getSecond()), this.method_31139(obj));
+       });
+    }
+ 
+@@ -254,11 +254,11 @@
+    }
+ 
+    public static <V, T extends V> T method_10230(class_2378<V> arg, class_2960 arg2, T object) {
+-      return ((class_2385)arg).method_10272(class_5321.method_29179(arg.field_25098, arg2), object, Lifecycle.stable());
++      return (T) ((class_2385)arg).method_10272(class_5321.method_29179(arg.field_25098, arg2), object, Lifecycle.stable());
+    }
+ 
+    public static <V, T extends V> T method_10231(class_2378<V> arg, int i, String string, T object) {
+-      return ((class_2385)arg).method_10273(i, class_5321.method_29179(arg.field_25098, new class_2960(string)), object, Lifecycle.stable());
++      return (T) ((class_2385)arg).method_10273(i, class_5321.method_29179(arg.field_25098, new class_2960(string)), object, Lifecycle.stable());
+    }
+ 
+    static {

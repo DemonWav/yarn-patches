@@ -1,0 +1,18 @@
+--- a/net/minecraft/class_3542.java
++++ b/net/minecraft/class_3542.java
+@@ -18,13 +18,13 @@
+    String method_15434();
+ 
+    static <E extends Enum<E> & class_3542> Codec<E> method_28140(Supplier<E[]> supplier, Function<? super String, ? extends E> function) {
+-      E[] enums = (Enum[])supplier.get();
++      E[] enums = supplier.get();
+       return method_28141(Enum::ordinal, (i) -> enums[i], function);
+    }
+ 
+    static <E extends class_3542> Codec<E> method_28141(final ToIntFunction<E> toIntFunction, final IntFunction<E> intFunction, final Function<? super String, ? extends E> function) {
+       return new Codec<E>() {
+-         public <T> DataResult<T> method_28144(E arg, DynamicOps<T> dynamicOps, T object) {
++         public <T> DataResult<T> encode(E arg, DynamicOps<T> dynamicOps, T object) {
+             return dynamicOps.compressMaps() ? dynamicOps.mergeToPrimitive(object, dynamicOps.createInt(toIntFunction.applyAsInt(arg))) : dynamicOps.mergeToPrimitive(object, dynamicOps.createString(arg.method_15434()));
+          }
+ 

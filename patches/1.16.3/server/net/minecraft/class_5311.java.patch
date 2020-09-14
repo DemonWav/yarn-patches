@@ -1,0 +1,19 @@
+--- a/net/minecraft/class_5311.java
++++ b/net/minecraft/class_5311.java
+@@ -10,14 +10,14 @@
+ 
+ public class class_5311 {
+    public static final Codec<class_5311> field_24821 = RecordCodecBuilder.create((instance) -> instance.group(class_5313.field_24913.optionalFieldOf("stronghold").forGetter((arg) -> Optional.ofNullable(arg.field_24825)), Codec.simpleMap(class_2378.field_16644, class_5314.field_24917, class_2378.field_16644).fieldOf("structures").forGetter((arg) -> arg.field_24824)).apply(instance, class_5311::new));
+-   public static final ImmutableMap<class_3195<?>, class_5314> field_24822 = ImmutableMap.builder().put(class_3195.field_24858, new class_5314(32, 8, 10387312)).put(class_3195.field_24847, new class_5314(32, 8, 14357617)).put(class_3195.field_24848, new class_5314(32, 8, 14357618)).put(class_3195.field_24846, new class_5314(32, 8, 14357619)).put(class_3195.field_24851, new class_5314(32, 8, 14357620)).put(class_3195.field_24843, new class_5314(32, 8, 165745296)).put(class_3195.field_24852, new class_5314(1, 0, 0)).put(class_3195.field_24853, new class_5314(32, 5, 10387313)).put(class_3195.field_24856, new class_5314(20, 11, 10387313)).put(class_3195.field_24845, new class_5314(80, 20, 10387319)).put(class_3195.field_24857, new class_5314(1, 0, 0)).put(class_3195.field_24844, new class_5314(1, 0, 0)).put(class_3195.field_24849, new class_5314(40, 15, 34222645)).put(class_3195.field_24850, new class_5314(24, 4, 165745295)).put(class_3195.field_24854, new class_5314(20, 8, 14357621)).put(class_3195.field_24860, new class_5314(27, 4, 30084232)).put(class_3195.field_24855, new class_5314(27, 4, 30084232)).put(class_3195.field_24859, new class_5314(2, 1, 14357921)).build();
++   public static final ImmutableMap<class_3195<?>, class_5314> field_24822 = ImmutableMap.<class_3195<?>, class_5314>builder().put(class_3195.field_24858, new class_5314(32, 8, 10387312)).put(class_3195.field_24847, new class_5314(32, 8, 14357617)).put(class_3195.field_24848, new class_5314(32, 8, 14357618)).put(class_3195.field_24846, new class_5314(32, 8, 14357619)).put(class_3195.field_24851, new class_5314(32, 8, 14357620)).put(class_3195.field_24843, new class_5314(32, 8, 165745296)).put(class_3195.field_24852, new class_5314(1, 0, 0)).put(class_3195.field_24853, new class_5314(32, 5, 10387313)).put(class_3195.field_24856, new class_5314(20, 11, 10387313)).put(class_3195.field_24845, new class_5314(80, 20, 10387319)).put(class_3195.field_24857, new class_5314(1, 0, 0)).put(class_3195.field_24844, new class_5314(1, 0, 0)).put(class_3195.field_24849, new class_5314(40, 15, 34222645)).put(class_3195.field_24850, new class_5314(24, 4, 165745295)).put(class_3195.field_24854, new class_5314(20, 8, 14357621)).put(class_3195.field_24860, new class_5314(27, 4, 30084232)).put(class_3195.field_24855, new class_5314(27, 4, 30084232)).put(class_3195.field_24859, new class_5314(2, 1, 14357921)).build();
+    public static final class_5313 field_24823;
+    private final Map<class_3195<?>, class_5314> field_24824;
+    @Nullable
+    private final class_5313 field_24825;
+ 
+    public class_5311(Optional<class_5313> optional, Map<class_3195<?>, class_5314> map) {
+-      this.field_24825 = (class_5313)optional.orElse((Object)null);
++      this.field_24825 = (class_5313)optional.orElse(null);
+       this.field_24824 = map;
+    }
+ 

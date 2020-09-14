@@ -1,0 +1,31 @@
+--- a/net/minecraft/class_3218.java
++++ b/net/minecraft/class_3218.java
+@@ -320,7 +320,7 @@
+    }
+ 
+    private void method_23660() {
+-      ((List)this.field_18261.stream().filter(class_1309::method_6113).collect(Collectors.toList())).forEach((arg) -> arg.method_7358(false, false));
++      (this.field_18261.stream().filter(class_1309::method_6113).collect(Collectors.toList())).forEach((arg) -> arg.method_7358(false, false));
+    }
+ 
+    public void method_18203(class_2818 arg, int i) {
+@@ -739,7 +739,7 @@
+ 
+    public void method_18764(class_2818 arg) {
+       this.field_18139.addAll(arg.method_12214().values());
+-      class_3509[] var2 = arg.method_12215();
++      class_3509<class_1297>[] var2 = arg.method_12215();
+       int var3 = var2.length;
+ 
+       for(int var4 = 0; var4 < var3; ++var4) {
+@@ -1192,8 +1192,8 @@
+ 
+       }
+ 
+-      Path path2 = path.resolve("chunks.csv");
+-      Writer writer3 = Files.newBufferedWriter(path2);
++      Path chunksPath = path.resolve("chunks.csv");
++      Writer writer3 = Files.newBufferedWriter(chunksPath);
+       Throwable var129 = null;
+ 
+       try {

@@ -1,0 +1,34 @@
+--- a/net/minecraft/class_5455.java
++++ b/net/minecraft/class_5455.java
+@@ -86,7 +86,7 @@
+    }
+ 
+    private static <R extends class_2378<?>> void method_30525(class_5455.class_5457 arg, class_5321<R> arg2) {
+-      class_2378<R> lv = class_5458.field_25926;
++      class_2378<R> lv = (class_2378<R>) class_5458.field_25926;
+       class_2378<?> lv2 = lv.method_29107(arg2);
+       if (lv2 == null) {
+          throw new IllegalStateException("Missing builtin registry: " + arg2);
+@@ -155,7 +155,7 @@
+ 
+       private static <E> Codec<class_5455.class_5457> method_30546() {
+          Codec<class_5321<? extends class_2378<E>>> codec = class_2960.field_25139.xmap(class_5321::method_29180, class_5321::method_29177);
+-         Codec<class_2370<E>> codec2 = codec.partialDispatch("type", (arg) -> DataResult.success(arg.method_30517()), (arg) -> method_30547(arg).map((codec) -> class_2370.method_29098(arg, Lifecycle.experimental(), codec)));
++         Codec<class_2370<E>> codec2 = codec.partialDispatch("type", (arg) -> DataResult.success(arg.method_30517()), (arg) -> method_30547(arg).map((codec3) -> class_2370.method_29098(arg, Lifecycle.experimental(), codec3)));
+          UnboundedMapCodec<? extends class_5321<? extends class_2378<?>>, ? extends class_2370<?>> unboundedMapCodec = Codec.unboundedMap(codec, codec2);
+          return method_30538(unboundedMapCodec);
+       }
+@@ -177,11 +177,11 @@
+       }
+ 
+       private static <E> class_2370<?> method_30548(class_5321<? extends class_2378<?>> arg) {
+-         return new class_2370<>(arg, Lifecycle.stable());
++         return new class_2370(arg, Lifecycle.stable());
+       }
+ 
+       public <E> Optional<class_2385<E>> method_30527(class_5321<? extends class_2378<E>> arg) {
+-         return Optional.ofNullable(this.field_25924.get(arg)).map((argx) -> argx);
++         return Optional.ofNullable(this.field_25924.get(arg)).map((argx) -> (class_2385<E>) argx);
+       }
+    }
+ }

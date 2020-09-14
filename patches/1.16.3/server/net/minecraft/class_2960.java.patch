@@ -1,0 +1,25 @@
+--- a/net/minecraft/class_2960.java
++++ b/net/minecraft/class_2960.java
+@@ -101,7 +101,7 @@
+       return 31 * this.field_13353.hashCode() + this.field_13355.hashCode();
+    }
+ 
+-   public int method_12833(class_2960 arg) {
++   public int compareTo(class_2960 arg) {
+       int i = this.field_13355.compareTo(arg.field_13355);
+       if (i == 0) {
+          i = this.field_13353.compareTo(arg.field_13353);
+@@ -160,11 +160,11 @@
+    }
+ 
+    public static class class_2961 implements JsonDeserializer<class_2960>, JsonSerializer<class_2960> {
+-      public class_2960 method_12840(JsonElement jsonElement, Type type, JsonDeserializationContext jsonDeserializationContext) throws JsonParseException {
++      public class_2960 deserialize(JsonElement jsonElement, Type type, JsonDeserializationContext jsonDeserializationContext) throws JsonParseException {
+          return new class_2960(class_3518.method_15287(jsonElement, "location"));
+       }
+ 
+-      public JsonElement method_12839(class_2960 arg, Type type, JsonSerializationContext jsonSerializationContext) {
++      public JsonElement serialize(class_2960 arg, Type type, JsonSerializationContext jsonSerializationContext) {
+          return new JsonPrimitive(arg.toString());
+       }
+    }

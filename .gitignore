@@ -1,0 +1,46 @@
+workspace/
+
+# IntelliJ
+**/out/
+.idea/
+
+# Eclipse
+.metadata
+bin/
+tmp/
+*.tmp
+*.bak
+*.swp
+*~.nib
+.project
+.settings/
+.recommenders/
+
+# VSCode
+.vscode/*
+*.code-workspace
+.history
+
+# Random filesystem files
+**/.DS_Store
+**/.AppleDouble
+**/.LSOverride
+**/*~
+**/.fuse_hidden*
+**/.directory
+**/.Trash-*
+**/.nfs*
+**/._*
+**/Thumbs.db
+**/Thumbs.db:encryptable
+**/ehthumbs.db
+**/ehthumbs_vista.db
+**/*.stackdump
+**/[Dd]esktop.ini
+
+# Gradle
+**/.gradle/
+**/build/
+*.jar
+
+!gradle/wrapper/gradle-wrapper.jar

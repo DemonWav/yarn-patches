@@ -1,0 +1,20 @@
+--- a/net/minecraft/class_1959.java
++++ b/net/minecraft/class_1959.java
+@@ -144,7 +144,7 @@
+       for(int j = 0; j < i; ++j) {
+          int k = 0;
+          if (arg.method_27834()) {
+-            for(class_3195<?> lv : (List)this.field_26634.getOrDefault(j, Collections.emptyList())) {
++            for(class_3195<?> lv : this.field_26634.getOrDefault(j, Collections.emptyList())) {
+                arg4.method_12664(l, k, j);
+                int m = arg5.method_10263() >> 4;
+                int n = arg5.method_10260() >> 4;
+@@ -164,7 +164,7 @@
+          }
+ 
+          if (list.size() > j) {
+-            for(Supplier<class_2975<?, ?>> supplier : (List)list.get(j)) {
++            for(Supplier<class_2975<?, ?>> supplier : list.get(j)) {
+                class_2975<?, ?> lv3 = (class_2975)supplier.get();
+                arg4.method_12664(l, k, j);
+ 

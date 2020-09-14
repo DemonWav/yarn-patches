@@ -1,0 +1,11 @@
+--- a/net/minecraft/class_3195.java
++++ b/net/minecraft/class_3195.java
+@@ -37,7 +37,7 @@
+    public static final class_3195<class_3812> field_24860 = method_28661("Bastion_Remnant", new class_5175(class_3812.field_24886), class_2893.class_2895.field_13173);
+    public static final List<class_3195<?>> field_24861 = ImmutableList.of(field_24843, field_24858, field_24859);
+    private static final class_2960 field_26362 = new class_2960("jigsaw");
+-   private static final Map<class_2960, class_2960> field_25839 = ImmutableMap.builder().put(new class_2960("nvi"), field_26362).put(new class_2960("pcp"), field_26362).put(new class_2960("bastionremnant"), field_26362).put(new class_2960("runtime"), field_26362).build();
++   private static final Map<class_2960, class_2960> field_25839 = ImmutableMap.<class_2960, class_2960>builder().put(new class_2960("nvi"), field_26362).put(new class_2960("pcp"), field_26362).put(new class_2960("bastionremnant"), field_26362).put(new class_2960("runtime"), field_26362).build();
+    private final Codec<class_5312<C, class_3195<C>>> field_24863;
+ 
+    private static <F extends class_3195<?>> F method_28661(String string, F arg, class_2893.class_2895 arg2) {

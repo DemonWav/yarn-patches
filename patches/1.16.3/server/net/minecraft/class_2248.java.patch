@@ -1,0 +1,11 @@
+--- a/net/minecraft/class_2248.java
++++ b/net/minecraft/class_2248.java
+@@ -14,7 +14,7 @@
+    protected static final Logger field_10638 = LogManager.getLogger();
+    public static final class_2361<class_2680> field_10651 = new class_2361<>();
+    private static final LoadingCache<class_265, Boolean> field_19312 = CacheBuilder.newBuilder().maximumSize(512L).weakKeys().build(new CacheLoader<class_265, Boolean>() {
+-      public Boolean method_20516(class_265 arg) {
++      public Boolean load(class_265 arg) {
+          return !class_259.method_1074(class_259.method_1077(), arg, class_247.field_16892);
+       }
+    });
